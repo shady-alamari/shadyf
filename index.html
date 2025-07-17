@@ -1,81 +1,177 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي الشخصي</title>
+  <title>متجر شادي ستور لي الشدات والتفاعلات</title>
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f7f7f7;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Cairo', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
     }
+
     header {
-      background-color: #4CAF50;
-      color: white;
+      background: linear-gradient(90deg, #1a1a1a, #2e0066);
       padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 10px #000;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #f0c000;
+    }
+
     nav {
-      background-color: #333;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      background-color: #111;
+      padding: 10px 0;
     }
+
     nav a {
-      float: right;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px;
+      color: #ddd;
+      margin: 0 20px;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      background-color: #ddd;
-      color: black;
+      color: #f0c000;
     }
-    section {
-      padding: 20px;
+
+    .hero {
+      background: url('https://i.imgur.com/qVu4QzP.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 0 10px #000;
     }
-    .gallery img {
-      width: 200px;
-      margin: 10px;
-      border-radius: 8px;
+
+    .hero h2 {
+      font-size: 3em;
+      color: #fff;
     }
-    footer {
+
+    .section {
+      padding: 50px 20px;
       text-align: center;
-      background-color: #333;
-      color: white;
-      padding: 10px;
+    }
+
+    .section h3 {
+      color: #f0c000;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 15px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 0 0 10px #000;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #f0c000;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h4 {
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    .product p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .contact, .about {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>مرحباً بكم في موقعي</h1>
-  <p>صفحة بسيطة من تصميم شادي العماري</p>
-</header>
+  <header>
+    <h1>🔥 متجر شادي ستورلي الشدات والتفاعلات 🔥</h1>
+  </header>
 
-<nav>
-  <a href="#contact">تواصل</a>
-  <a href="#gallery">معرض</a>
-  <a href="#about">نبذة</a>
-</nav>
+  <nav>
+    <a href="#products">المنتجات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
 
-<section id="about">
-  <h2>من أنا؟</h2>
-  <p>أنا مصمم ومبرمج مواقع إلكترونية. أحب مشاركة المعرفة والتقنية مع الجميع.</p>
-</section>
+  <div class="hero">
+    <h2>اشحن شداتك وزد متابعينك الآن!</h2>
+  </div>
 
-<section id="gallery" class="gallery">
-  <h2>معرض الصور</h2>
-  <img src="https://via.placeholder.com/200" alt="صورة 1">
-  <img src="https://via.placeholder.com/200" alt="صورة 2">
-  <img src="https://via.placeholder.com/200" alt="صورة 3">
-</section>
+  <section class="section" id="products">
+    <h3>المنتجات</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/d0V0vwb.png" alt="PUBG UC">
+        <h4>شدات PUBG</h4>
+        <p>اشحن شدات ببجي بأفضل الأسعار</p>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/xz6ICWj.png" alt="IG followers">
+        <h4>متابعين انستقرام</h4>
+        <p>متابعين حقيقيين وفوريين لحسابك</p>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/YTjXoY6.png" alt="Tiktok Likes">
+        <h4>لايكات TikTok</h4>
+        <p>زد من تفاعلاتك واشتهر في التيك توك</p>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>تواصل معي</h2>
-  <p>البريد الإلكتروني: example@email.com</p>
-  <p>الهاتف: 0926302171-
+  <section class="section about" id="about">
+    <h3>من نحن</h3>
+    <p>نحن فريق محترف في تقديم خدمات الشحن والتسويق الرقمي، نضمن لك الأمان والسرعة في التعامل.</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h3>تواصل معنا</h3>
+    <p>راسلنا عبر الواتساب أو الإنستقرام لأي استفسار أو طلب خاص</p>
+    <p>📞 واتساب: <a href="https://wa.me/218926302171" style="color: #f0c000;">اضغط هنا</a></p>
+    <p>📸 إنستقرام: <a href="https://instagram.com/sh.adi05" style="color: #f0c000;">@sh.adi05</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 متجر شادي ستور لي الشدات والتفاعلات. جميع الحقوق محفوظة.
+  </footer>
+
+</body>
+</html>
