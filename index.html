@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>شادي ستور | شدات وتفاعلات فاخرة</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -18,7 +18,6 @@
       background: linear-gradient(90deg, #1a1a1a, #30006b);
       padding: 30px 10px;
       text-align: center;
-      box-shadow: 0 0 30px #000;
     }
 
     header h1 {
@@ -97,6 +96,9 @@
       padding: 25px;
       transition: transform 0.4s, box-shadow 0.4s;
       box-shadow: 0 0 15px #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .product:hover {
@@ -118,6 +120,26 @@
     .product p {
       color: #ccc;
       font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .order-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: linear-gradient(45deg, #fcd000, #fff200);
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 0 15px #fcd000;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #fff200, 0 0 40px #fcd000;
     }
 
     .login-section {
@@ -157,7 +179,8 @@
       background: #ffe100;
     }
 
-    .contact, .about {
+    .contact,
+    .about {
       max-width: 700px;
       margin: auto;
     }
@@ -171,14 +194,48 @@
       margin-top: 60px;
     }
 
+    /* عرض خاص + عداد تنازلي */
+    .offer-timer {
+      background: #220044;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 50px 20px;
+      box-shadow: 0 0 20px #fcd000;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .offer-timer h3 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #fcd000;
+    }
+
+    .offer-timer p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    #countdown {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #fff;
+    }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>🔥 شادي ستور | شدات وتفاعلات رقمية 🔥</h1>
   </header>
@@ -194,49 +251,92 @@
     <h2>اشحن ورتقِ بخدمات رقمية استثنائية ✨</h2>
   </div>
 
+  <!-- إضافة عداد العرض التنازلي -->
+  <div class="offer-timer">
+    <h3>🔥 عرض خاص على شدات PUBG! 🔥</h3>
+    <p>⏰ العرض ينتهي خلال: <span id="countdown">00:00:00</span></p>
+  </div>
+
   <section class="section" id="products">
     <h3>المنتجات</h3>
     <div class="products">
       <div class="product">
-        <img src="https://i.imgur.com/d0V0vwb.png" alt="PUBG UC">
+        <img src="https://i.imgur.com/d0V0vwb.png" alt="PUBG UC" />
         <h4>شدات PUBG</h4>
         <p>اشحن شدات ببجي بأفضل الأسعار</p>
+        <a href="https://wa.me/218926302171?text=أريد+شراء+شدات+PUBG" class="order-btn" target="_blank"
+          >🛒 اطلب الآن</a
+        >
       </div>
       <div class="product">
-        <img src="https://i.imgur.com/xz6ICWj.png" alt="IG followers">
+        <img src="https://i.imgur.com/xz6ICWj.png" alt="IG followers" />
         <h4>متابعين انستقرام</h4>
         <p>متابعين حقيقيين وفوريين لحسابك</p>
+        <a href="https://wa.me/218926302171?text=أريد+شراء+متابعين+انستقرام" class="order-btn" target="_blank"
+          >🛒 اطلب الآن</a
+        >
       </div>
       <div class="product">
-        <img src="https://i.imgur.com/YTjXoY6.png" alt="Tiktok Likes">
+        <img src="https://i.imgur.com/YTjXoY6.png" alt="Tiktok Likes" />
         <h4>لايكات TikTok</h4>
         <p>زد من تفاعلاتك واشتهر في التيك توك</p>
+        <a href="https://wa.me/218926302171?text=أريد+شراء+لايكات+تيك+توك" class="order-btn" target="_blank"
+          >🛒 اطلب الآن</a
+        >
       </div>
     </div>
   </section>
 
   <section class="section login-section" id="login">
     <h3>تسجيل الدخول / إنشاء حساب</h3>
-    <input type="text" placeholder="اسم المستخدم">
-    <input type="password" placeholder="كلمة المرور">
+    <input type="text" placeholder="اسم المستخدم" />
+    <input type="password" placeholder="كلمة المرور" />
     <button>دخول</button>
   </section>
 
   <section class="section about" id="about">
     <h3>من نحن</h3>
-    <p>نحن فريق متخصص في خدمات الشحن والتسويق الرقمي، نلتزم بالجودة والسرعة والمصداقية.</p>
+    <p>
+      نحن فريق متخصص في خدمات الشحن والتسويق الرقمي، نلتزم بالجودة والسرعة والمصداقية.
+    </p>
   </section>
 
   <section class="section contact" id="contact">
     <h3>تواصل معنا</h3>
     <p>راسلنا عبر الواتساب أو الإنستقرام لأي استفسار أو طلب خاص</p>
-    <p>📞 واتساب: <a href="https://wa.me/218926302171" style="color: #fcd000;">اضغط هنا</a></p>
-    <p>📸 إنستقرام: <a href="https://instagram.com/sh.adi05" style="color: #fcd000;">@sh.adi05</a></p>
+    <p>
+      📞 واتساب:
+      <a href="https://wa.me/218926302171" style="color: #fcd000;">اضغط هنا</a>
+    </p>
+    <p>
+      📸 إنستقرام:
+      <a href="https://instagram.com/sh.adi05" style="color: #fcd000;">@sh.adi05</a>
+    </p>
   </section>
 
   <footer>
     &copy; 2025 متجر شادي ستور | جميع الحقوق محفوظة.
   </footer>
 
+  <script>
+    const countdownTime = new Date().getTime() + 24 * 60 * 60 * 1000;
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownTime - now;
+
+      if (distance <= 0) {
+        document.getElementById('countdown').innerHTML = 'انتهى العرض!';
+        clearInterval(countdownInterval);
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerHTML =
+        ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')};
+    }, 1000);
+  </script>
 </body>
 </html>
