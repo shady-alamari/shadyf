@@ -9,37 +9,39 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to right, #0d0d0d, #1c0033);
+      background: linear-gradient(to left, #1c0033, #000);
       color: #fff;
       overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(90deg, #1a1a1a, #30006b);
+      background-color: #111;
       padding: 30px 10px;
       text-align: center;
+      box-shadow: 0 0 25px #fcd000;
     }
 
     header h1 {
       margin: 0;
       font-size: 3em;
       color: #fcd000;
-      text-shadow: 0 0 20px #fcd000;
+      text-shadow: 0 0 15px #fcd000;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background: #111;
+      background: #000;
       padding: 15px 0;
       gap: 30px;
       position: sticky;
       top: 0;
       z-index: 999;
+      box-shadow: 0 0 10px #fcd000;
     }
 
     nav a {
-      color: #ddd;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
@@ -65,7 +67,7 @@
       font-size: 3.5em;
       color: #fff;
       text-shadow: 0 0 20px #000;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       padding: 15px 30px;
       border-radius: 15px;
     }
@@ -79,48 +81,6 @@
       color: #fcd000;
       font-size: 2.5em;
       margin-bottom: 40px;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .product {
-      background: #1b1b1b;
-      border: 1px solid #333;
-      border-radius: 20px;
-      width: 260px;
-      padding: 25px;
-      transition: transform 0.4s, box-shadow 0.4s;
-      box-shadow: 0 0 15px #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .product:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 0 30px #fcd000;
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .product h4 {
-      color: #fff;
-      margin: 15px 0 10px;
-      font-size: 1.3em;
-    }
-
-    .product p {
-      color: #ccc;
-      font-size: 14px;
-      margin-bottom: 15px;
     }
 
     .order-btn {
@@ -150,6 +110,7 @@
 
     .login-section h3 {
       margin-bottom: 20px;
+      color: #fcd000;
     }
 
     .login-section input {
@@ -179,8 +140,7 @@
       background: #ffe100;
     }
 
-    .contact,
-    .about {
+    .contact, .about {
       max-width: 700px;
       margin: auto;
     }
@@ -192,9 +152,9 @@
       padding: 25px 10px;
       font-size: 14px;
       margin-top: 60px;
+      box-shadow: 0 0 20px #fcd000 inset;
     }
 
-    /* عرض خاص + عداد تنازلي */
     .offer-timer {
       background: #220044;
       padding: 25px;
@@ -241,8 +201,7 @@
   </header>
 
   <nav>
-    <a href="#products">المنتجات</a>
-    <a href="#login">الدخول</a>
+    <a href="#menu">القائمة</a>
     <a href="#about">من نحن</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
@@ -251,39 +210,16 @@
     <h2>اشحن ورتقِ بخدمات رقمية استثنائية ✨</h2>
   </div>
 
-  <!-- إضافة عداد العرض التنازلي -->
   <div class="offer-timer">
     <h3>🔥 عرض خاص على شدات PUBG! 🔥</h3>
     <p>⏰ العرض ينتهي خلال: <span id="countdown">00:00:00</span></p>
   </div>
 
-  <section class="section" id="products">
-    <h3>المنتجات</h3>
-    <div class="products">
-      <div class="product">
-        <img src="https://i.imgur.com/d0V0vwb.png" alt="PUBG UC" />
-        <h4>شدات PUBG</h4>
-        <p>اشحن شدات ببجي بأفضل الأسعار</p>
-        <a href="https://wa.me/218926302171?text=أريد+شراء+شدات+PUBG" class="order-btn" target="_blank"
-          >🛒 اطلب الآن</a
-        >
-      </div>
-      <div class="product">
-        <img src="https://i.imgur.com/xz6ICWj.png" alt="IG followers" />
-        <h4>متابعين انستقرام</h4>
-        <p>متابعين حقيقيين وفوريين لحسابك</p>
-        <a href="https://wa.me/218926302171?text=أريد+شراء+متابعين+انستقرام" class="order-btn" target="_blank"
-          >🛒 اطلب الآن</a
-        >
-      </div>
-      <div class="product">
-        <img src="https://i.imgur.com/YTjXoY6.png" alt="Tiktok Likes" />
-        <h4>لايكات TikTok</h4>
-        <p>زد من تفاعلاتك واشتهر في التيك توك</p>
-        <a href="https://wa.me/218926302171?text=أريد+شراء+لايكات+تيك+توك" class="order-btn" target="_blank"
-          >🛒 اطلب الآن</a
-        >
-      </div>
+  <section class="section" id="menu">
+    <h3>القائمة</h3>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+      <a href="products.html" class="order-btn">المنتجات</a>
+      <a href="#login" class="order-btn">تسجيل الدخول</a>
     </div>
   </section>
 
