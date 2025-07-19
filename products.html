@@ -2,220 +2,132 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>المنتجات | شادي ستور</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to left, #1c0033, #000);
+      background-color: #111;
       color: #fff;
+      margin: 0;
       padding: 0;
+      text-align: center;
     }
 
     header {
-      background-color: #111;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 0 25px #fcd000;
+      background-color: #0d0d0d;
+      padding: 20px;
+      box-shadow: 0 0 30px #0ff;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.8em;
-      color: #fcd000;
-      text-shadow: 0 0 15px #fcd000;
+      font-size: 2em;
+      color: #0ff;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #000;
-      padding: 15px 0;
-      gap: 30px;
-      box-shadow: 0 0 10px #fcd000;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #fcd000;
-      transform: scale(1.1);
-    }
-
-    .section {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .section h2 {
-      color: #fcd000;
-      margin-bottom: 40px;
-      font-size: 2.5em;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+    .product-section {
+      padding: 30px 15px;
     }
 
     .product {
       background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 15px;
-      width: 250px;
+      margin: 20px auto;
       padding: 20px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow: 0 0 15px #000;
-    }
-
-    .product:hover {
-      box-shadow: 0 0 30px #fcd000;
-      transform: translateY(-8px);
+      border-radius: 10px;
+      border: 1px solid #0ff;
+      max-width: 400px;
     }
 
     .product h3 {
-      color: #fcd000;
-      margin-bottom: 10px;
+      margin-top: 0;
+      font-size: 1.6em;
+      color: #0ff;
     }
 
     .product p {
       font-size: 14px;
-      color: #ccc;
-      margin-bottom: 15px;
+      margin: 10px 0;
     }
 
-    .order-btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: linear-gradient(45deg, #fcd000, #fff200);
+    .product button {
+      background-color: #0ff;
       color: #000;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 0.95em;
-      box-shadow: 0 0 10px #fcd000;
-      transition: 0.3s;
-    }
-
-    .order-btn:hover {
-      box-shadow: 0 0 25px #fff200;
-      transform: scale(1.05);
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
     }
 
     footer {
-      text-align: center;
-      color: #aaa;
-      font-size: 13px;
-      margin-top: 60px;
       padding: 20px;
-      background-color: #111;
-      box-shadow: 0 0 20px #fcd000 inset;
+      background-color: #0d0d0d;
+      color: #aaa;
+      font-size: 0.9em;
     }
 
-    /* 📱 تحسين العرض على الجوال */
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       header h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
       }
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
+      .product h3 {
+        font-size: 1.2em;
       }
 
-      .section h2 {
-        font-size: 1.8em;
-      }
-
-      .products {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .product {
-        width: 90%;
-      }
-
-      .order-btn {
-        font-size: 1em;
-        width: 80%;
-        padding: 12px 20px;
-      }
-
-      footer {
+      .product p {
         font-size: 13px;
-        padding: 15px;
+      }
+
+      .product button {
+        font-size: 0.95em;
+        padding: 10px 15px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>🛒 منتجات شادي ستور</h1>
+    <h1>منتجات شادي ستور</h1>
   </header>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="#products">المنتجات</a>
-    <a href="#footer">تواصل معنا</a>
-  </nav>
-
-  <section class="section" id="products">
-    <h2>اختر خدمتك المميزة ✨</h2>
-    <div class="products">
-      <div class="product">
-        <h3>خدمات فيس بوك</h3>
-        <p>زيادة متابعين وليكات ومشاهدات بأسعار مميزة.</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
-
-      <div class="product">
-        <h3>خدمات تيك توك</h3>
-        <p>زيادة متابعين وليكات ومشاهدات تيك توك بأسعار مميزة.</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
-
-      <div class="product">
-        <h3>خدمات إنستقرام</h3>
-        <p>احصل على متابعين و لايكات و مشاهدات فورية وآمنة لصورك ومنشوراتك.</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
-
-      <div class="product">
-        <h3>خدمات تيليجرام</h3>
-        <p>زيادة عدد أعضاء و مشاهدات قناتك أو مجموعتك.</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
-
-      <div class="product">
-        <h3>شدات ببجي</h3>
-        <p>اشحن شداتك الآن بسرعة وأمان!</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
-
-      <div class="product">
-        <h3>مجوهرات فري فاير</h3>
-        <p>اشحن حسابك بأفضل العروض.</p>
-        <a href="#order" class="order-btn">اطلب الآن</a>
-      </div>
+  <div class="product-section">
+    <div class="product">
+      <h3>شدات ببجي</h3>
+      <p>اشترِ الآن بأفضل الأسعار.</p>
+      <button>شراء</button>
     </div>
-  </section>
 
-  <footer id="footer">
-    &copy; 2025 شادي ستور | جميع الحقوق محفوظة.
+    <div class="product">
+      <h3>مجوهرات فري فاير</h3>
+      <p>اشحن حسابك مباشرة.</p>
+      <button>شراء</button>
+    </div>
+
+    <div class="product">
+      <h3>متابعين تيك توك</h3>
+      <p>زيادة متابعين حقيقيين.</p>
+      <button>شراء</button>
+    </div>
+
+    <div class="product">
+      <h3>لايكات انستقرام</h3>
+      <p>تفاعل حقيقي وفوري.</p>
+      <button>شراء</button>
+    </div>
+
+    <div class="product">
+      <h3>مشاهدات تيليجرام</h3>
+      <p>رفع مشاهدات القنوات.</p>
+      <button>شراء</button>
+    </div>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة © شادي ستور 2025
   </footer>
-
 </body>
 </html>
