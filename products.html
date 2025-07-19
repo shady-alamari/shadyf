@@ -122,6 +122,42 @@
       background-color: #111;
       box-shadow: 0 0 20px #fcd000 inset;
     }
+
+    /* 📱 تحسين العرض على الجوال */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .section h2 {
+        font-size: 1.8em;
+      }
+
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product {
+        width: 90%;
+      }
+
+      .order-btn {
+        font-size: 1em;
+        width: 80%;
+        padding: 12px 20px;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -150,21 +186,25 @@
         <p>زيادة متابعين وليكات ومشاهدات تيك توك بأسعار مميزة.</p>
         <a href="#order" class="order-btn">اطلب الآن</a>
       </div>
+
       <div class="product">
         <h3>خدمات إنستقرام</h3>
         <p>احصل على متابعين و لايكات و مشاهدات فورية وآمنة لصورك ومنشوراتك.</p>
         <a href="#order" class="order-btn">اطلب الآن</a>
       </div>
+
       <div class="product">
         <h3>خدمات تيليجرام</h3>
-        <p>زيادة عدد أعضاء و مشاهدات  قناتك أو مجموعتك.</p>
+        <p>زيادة عدد أعضاء و مشاهدات قناتك أو مجموعتك.</p>
         <a href="#order" class="order-btn">اطلب الآن</a>
       </div>
+
       <div class="product">
         <h3>شدات ببجي</h3>
         <p>اشحن شداتك الآن بسرعة وأمان!</p>
         <a href="#order" class="order-btn">اطلب الآن</a>
       </div>
+
       <div class="product">
         <h3>مجوهرات فري فاير</h3>
         <p>اشحن حسابك بأفضل العروض.</p>
